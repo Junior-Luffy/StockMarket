@@ -1,0 +1,28 @@
+server:
+  port: 8084
+
+spring: 
+  application:
+    name: company-service
+  jackson:
+    time-zone: GMT+8
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://39.108.113.145:3306/myfsd?serverTimezone=Asia/Shanghai
+    username: william
+    password: asdf1234
+  jpa:
+    hibernate:
+      ddl-auto: update  #create,create-drop,update,validate
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+           defaultZone: http://127.0.0.1:8100/eureka  #aliyun http://172.18.57.3:8100/eureka
+    register-with-eureka: true
+    fetch-registry: true
+
+swagger:
+  enabled: true

@@ -1,0 +1,12 @@
+INDEX VERSION 1.131+C:\workspace\Stock-Chart\.metadata\.plugins\org.eclipse.jdt.core
+3504630074.index
+2368384133.index
+3895799506.index
+288275133.index
+3961618555.index
+1201527682.index
+208089862.index
+1192711966.index
+1423902306.index
+1279287498.index
+2089357537.index

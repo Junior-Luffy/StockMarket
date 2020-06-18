@@ -1,0 +1,52 @@
+server:
+  port: 8087
+spring:
+  application:
+    name: app-zuul-gateway 
+
+eureka:
+  client:
+    service-url:
+           defaultZone: http://127.0.0.1:8100/eureka
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+      prefer-ip-address: true 
+      ip-address: 127.0.0.1
+      instance-id: ${spring.application.name}###${server.port}
+
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+        isolation:
+          thread:
+            timeoutInMilliseconds: 80000 
+
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 20000
+
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+  routes:
+    user-service:
+      path: /api-user/**
+      serviceId: user-service
+    auth-service:
+      path: /auth/**
+      serviceId: auth-service
+    attachment-service:
+      path: /api-attachement/**
+      serviceId: attachment-service
+    company-service:
+      path: /api-company/**
+      serviceId: company-service
+    sector-service:
+      path: /api-sector/**
+      serviceId: sector-service
