@@ -1,0 +1,30 @@
+<table class="table">
+    <caption>IPO list</caption>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>companyname</th>
+            <th>stockexchange</th>
+            <th>pricepershare</th>
+            <th>totalnumber</th>
+            <th>opendatetime</th>
+            <th>operation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ipo of ipos">
+            <td>{{ipo.id}}</td>
+            <td>{{ipo.companyname}}</td>
+            <td>{{ipo.stockexchange}}</td>
+            <td>{{ipo.pricepershare}}</td>
+            <td>{{ipo.totalnumber}}</td>
+            <td>{{ipo.opendatetime}}</td>
+            <td>{{ipo.operation}}</td>
+            <td>
+                <a routerLink="/admin/update-ipo/{{ipo.id}}"><button type="button" class="btn btn-primary">edit</button></a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<a routerLink="/admin/add-ipo"><button type="button" class="btn btn-success">add IPO</button></a>

@@ -1,0 +1,47 @@
+<div class="card shadow">
+    <p class="h4 card-header">Add New Stock Exchange</p>
+    <div class="card-body bg-light">
+        <p class="card-text h6">Please fill the details:</p>
+        <div class="input-group mt-3 mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Stock Exchange Name</span>
+            </div>
+            <input [(ngModel)]="stockExchange.stockexchange" type="text" class="form-control" />
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Brief</span>
+            </div>
+            <textarea [(ngModel)]="stockExchange.brief" class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Address</span>
+            </div>
+            <textarea [(ngModel)]="stockExchange.contactaddress" class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Remark</span>
+            </div>
+            <textarea [(ngModel)]="stockExchange.remark" class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        <div class="d-flex no-gutters">
+            <div class="col">
+                <button [disabled]="loading" (click)="add()" type="submit" class="btn btn-success">Add</button>
+                <button [disabled]="loading" (click)="reset()" type="reset" class="btn btn-danger ml-2">Reset</button>
+            </div>
+            <div>
+                <a routerLink="/admin/list-stockexchange">
+                    <button class="btn btn-secondary">Back</button>
+                </a>
+            </div>
+        </div>
+        <div *ngIf="success" class="input-group mb-3">
+            add stock exchange successfully
+        </div>
+        <div *ngIf="failed" class="input-group mb-3">
+            add stock exchange failed
+        </div>
+    </div>
+</div>

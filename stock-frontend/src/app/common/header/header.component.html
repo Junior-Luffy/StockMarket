@@ -1,0 +1,103 @@
+<header class="shadow" *ngIf="role == 'admin'">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+    <div class="container">
+      <a class="navbar-brand">
+        <h1 class="w3-container  w3-center w3-allerta">Stock</h1>
+      </a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mx-auto">
+
+          <div class="nav-item">
+            <a class="nav-link" routerLink="/admin/upload">Import Stock Data</a>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <div class="btn-group" dropdown>
+            <button id="button-basic" dropdownToggle class="btn btn-info dropdown-toggle"
+              aria-controls="dropdown-basic">
+              Manage Company
+            </button>
+            <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu bg-info" role="menu" aria-labelledby="button-basic">
+              <li role="menuitem"><a class="dropdown-item" routerLink="/admin/list-company">List
+                Company</a></li>
+              <li role="menuitem"><a class="dropdown-item" routerLink="/admin/add-company">Add
+                  Company</a></li>
+            </ul>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <div class="btn-group" dropdown>
+            <button id="button-basic" dropdownToggle class="btn btn-info dropdown-toggle"
+              aria-controls="dropdown-basic">
+              Manage Exchange
+            </button>
+            <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu  bg-info" role="menu" aria-labelledby="button-basic">
+              <li role="menuitem"><a class="dropdown-item" routerLink="/admin/list-stockexchange">List
+                Exchange</a></li>
+              <li role="menuitem"><a class="dropdown-item" routerLink="/admin/add-stock-exchange">Add
+                  Exchange</a></li>
+            </ul>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <div class="nav-item">
+            <a class="nav-link" routerLink="/admin/list-ipo">Manage IPO</a>
+          </div>
+
+        </div>
+        <div class="navbar-nav">
+          <div class="nav-item">
+            <a class="nav-link d-flex" href="">
+              <i class="fa fa-user mr-2 mt-1"></i>
+              <span>Logout</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<header class="shadow" *ngIf="role == 'user'">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+    <div class="container">
+      <a class="navbar-brand">
+        <h1 class="w3-container  w3-center w3-allerta">Stock</h1>
+      </a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mx-auto">
+
+          <div class="nav-item">
+              <a class="nav-link" routerLink="/user/manage-ipo">IPOs</a>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <div class="nav-item">
+              <a class="nav-link" routerLink="/user/compare-details">Compare Company</a>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <div class="nav-item">
+              <a class="nav-link" routerLink="/user/compare-sector-details">Compare Sector</a>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <div class="nav-item">
+            <a class="nav-link" routerLink="/user/details">Manage Profile</a>
+          </div>
+
+        </div>
+        <div class="navbar-nav">
+          <div class="nav-item">
+            <a class="nav-link d-flex" href="">
+              <i class="fa fa-user mr-2 mt-1"></i>
+              <span>Logout</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,60 @@
+<div class="card shadow">
+    <p class="h4 card-header">Add IPO</p>
+    <div class="card-body bg-light">
+        <p class="card-text h6">Please fill the details:</p>
+        <div class="input-group mt-3 mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Company Name</span>
+            </div>
+            <input [(ngModel)]="ipo.companyname" type="text" class="form-control" />
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Stock Exchange</label>
+            </div>
+            <select [(ngModel)]="ipo.stockexchange" class="custom-select" id="inputGroupSelect01">
+                <option selected>Choose Stock Exchange...</option>
+                <option value="BSE">BSE</option>
+                <option value="NSE">NSE</option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> Price/Share in Rs.</span>
+            </div>
+            <input [(ngModel)]="ipo.pricepershare" type="text" class="form-control">
+            <div class="input-group-append">
+                <span class="input-group-text">.00</span>
+            </div>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Total no. of Shares</span>
+            </div>
+            <input [(ngModel)]="ipo.totalnumber" type="text" class="form-control" />
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Open date time</span>
+            </div>
+            <input [(ngModel)]="ipo.opendatetime" type="date" class="form-control" />
+        </div>
+        <div class="d-flex no-gutters">
+            <div class="col">
+                <button [disabled]="loading" (click)="add()" type="submit" class="btn btn-success">Submit</button>
+                <button [disabled]="loading" (click)="reset()"type="reset" class="btn btn-danger ml-2">Reset</button>
+            </div>
+            <div>
+                <a routerLink="/admin/list-ipo">
+                    <button class="btn btn-secondary">Back</button>
+                </a>
+            </div>
+        </div>
+        <div *ngIf="success" class="input-group mb-3">
+            add IPO successfully
+        </div>
+        <div *ngIf="failed" class="input-group mb-3">
+            add IPO failed
+        </div>
+    </div>
+</div>

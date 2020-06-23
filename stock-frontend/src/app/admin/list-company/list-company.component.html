@@ -1,0 +1,23 @@
+<table class="table">
+    <caption>company list</caption>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>companyname</th>
+            <th>stockexchangecode</th>
+            <th>brief</th>
+            <th>operation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let company of companies">
+            <td>{{company.id}}</td>
+            <td>{{company.companyname}}</td>
+            <td>{{company.stockexchangecode}}</td>
+            <td>{{company.brief}}</td>
+            <td>
+                <a routerLink="/admin/update-company/{{company.id}}"><button type="button" class="btn btn-primary">edit</button></a>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,49 @@
+<div class="card shadow">
+    <p class="h4 card-header">Compare Company</p>
+    <div class="card-body bg-light">
+        <div *ngFor="let item of divs, let i=index, trackBy:indexTracker">
+            <div class="input-group mt-3 mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">sector</span>
+                </div>
+                <input  type="text" class="form-control" />
+            </div>
+        </div>
+        <button (click)="createDiv()" type="button" class="btn btn-primary">add sector</button>
+
+        <div class="input-group mt-3 mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Stock Exchange</label>
+            </div>
+            <select  class="custom-select">
+                <option selected>Choose Stock Exchange...</option>
+                <option value="BSE">BSE</option>
+                <option value="NSE">NSE</option>
+            </select>
+        </div>
+
+        <div class="input-group mt-3 mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">from period</span>
+            </div>
+            <input type="text" class="form-control" />
+
+            <div class="input-group-prepend">
+                <span class="input-group-text">to period</span>
+            </div>
+            <input  type="text" class="form-control" />
+        </div>
+
+        <div class="input-group mt-3 mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">specify periodicity</span>
+            </div>
+            <input type="text" class="form-control" />
+        </div>
+
+        <div class="input-group mt-3 mb-3">
+            <button (click)="generate()" type="button" class="btn btn-success">generate chart</button>
+        </div>
+
+    </div>
+</div>

@@ -2,9 +2,15 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\workspace\Stock-Chart\gateway"/>
+			<item value="C:\workspace\Stock-Chart\authservice"/>
+			<item value="C:\workspace\Stock-Chart\eurekaserver"/>
+			<item value="C:\workspace\Stock-Chart\attachmentservice"/>
+			<item value="C:\workspace\Stock-Chart\companyservice"/>
+			<item value="C:\workspace\Stock-Chart\sectorservice"/>
+			<item value="C:\workspace\Stock-Chart\userservice"/>
 			<item value="C:\Users\YongMao\Desktop\service\companyservice"/>
 			<item value="C:\workspace\Stock-Chart\userservice\src\main\resources\application.yml"/>
-			<item value="C:\workspace\Stock-Chart\userservice"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

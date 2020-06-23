@@ -1,0 +1,58 @@
+<section class="container">
+    <div class="row m-4">
+        <div class="col" style="height: 70vh;">
+            <div class="card shadow">
+                <p class="h4 card-header">Update User</p>
+                <div class="card-body bg-light">
+
+                    <p class="card-text">Details:&nbsp;</p>
+
+                    <div class="input-group mt-3 mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Username</span>
+                        </div>
+                        <input disabled [(ngModel)]="user.username" type="text" class="form-control" />
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Password</span>
+                        </div>
+                        <input type="text" class="form-control" />
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Re-enter Password" />
+                    </div>
+
+                    <div class="input-group mt-3 mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Role</span>
+                        </div>
+                        <input disabled [(ngModel)]="user.role" type="text" class="form-control" />
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Email</span>
+                        </div>
+                        <input [(ngModel)]="user.email" type="text" class="form-control" />
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Mobile</span>
+                        </div>
+                        <input [(ngModel)]="user.mobileNumber" type="text" class="form-control" />
+                    </div>
+                    <div class="input-group mb-3">
+                        <button (click)="update()" class="btn btn-success">Submit</button>
+                        <a routerLink="/user/details">
+                            <button class="btn btn-secondary ml-2">Back</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,15 @@
+<div class="chart-wrapper">
+    <canvas baseChart 
+    [data]="pieChartData" 
+    [labels]="pieChartLabels" 
+    [chartType]="pieChartType"
+    [options]="pieChartOptions"
+    [plugins]="pieChartPlugins"
+    [legend]="pieChartLegend">
+  </canvas>
+</div>
+<div>
+    <a routerLink="/user/compare-sector-details">
+        <button class="btn btn-secondary">Back</button>
+    </a>
+</div>

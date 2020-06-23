@@ -1,0 +1,11 @@
+<app-header [role]="role"></app-header>
+<section class="container">
+    <div class="row mt-t">
+        <div class="col">welcome {{username}}, your role is {{role}}.</div>
+    </div>
+    <div class="row mt-5">
+        <div class="col">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</section>

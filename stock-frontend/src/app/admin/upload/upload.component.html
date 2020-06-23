@@ -1,0 +1,31 @@
+<div class="hero-bkg-animated">
+    <div class="card text-dark bg-light mb-3">
+        <p class="h4 card-header">Import Excel Data</p>
+        <div class="card-body bg-light">
+
+            <p class="card-text">Select File to be uploaded:&nbsp;</p>
+            <div class="input-group mb-3">
+                <div class="custom-file">
+                    <input type="file" (change)="getUpload($event)"
+                        accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+                </div>
+                <div class="input-group-append">
+                    <button [disabled]="loading" class="btn btn-success" (click)="onSubmit()">Upload</button>
+                </div>
+            </div>
+
+            <a href="assets/stock_data_template.xlsx" >click here to download template</a>
+        </div>
+    </div>
+
+    <div *ngIf="imported" class="card text-dark bg-light mb-3">
+        <p class="h4 card-header">Summary of Upload</p>
+        <div class="card-body bg-light">
+            <p class="card-text">Company Name:&nbsp;{{importinfo.companycode}}</p>
+            <p class="card-text">Stock Exchange:&nbsp;{{importinfo.stockexchange}}</p>
+            <p class="card-text">Import number:&nbsp;{{importinfo.totalnumbers}}</p>
+            <p class="card-text">From date:&nbsp;{{importinfo.starttime}}</p>
+            <p class="card-text">To date:&nbsp;{{importinfo.endtime}}</p>
+        </div>
+    </div>
+</div>

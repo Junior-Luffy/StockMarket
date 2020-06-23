@@ -1,0 +1,12 @@
+html, body {
+    margin: 0; padding: 0;
+}
+  
+.hero-bkg-animated h1 {
+font-family: sans-serif;
+}
+  
+@-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: -400px 0; }
+}

@@ -1839,3 +1839,15 @@ java.lang.NullPointerException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-18 23:59:45.785
 !MESSAGE executing callback sts4.classpath.MYlUXQJr SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-19 00:59:42.711
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.MYlUXQJr
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-19 00:59:42.732
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.MYlUXQJr
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-19 00:59:42.742
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-19 00:59:42.752
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.MYlUXQJr => OK
